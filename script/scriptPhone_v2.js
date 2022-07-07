@@ -216,9 +216,7 @@ function animate() {
     // PLS DO NOT EDIT
     requestAnimationFrame( animate );
 	renderer.autoClear = true;
-	if(isAnimated){
-		controls.update();
-	}
+	controls.update();
 	camera.quaternion.copy( skydome.camera.quaternion );
 	renderer.render(skydome.scene, skydome.camera);
 	renderer.autoClear = false;
