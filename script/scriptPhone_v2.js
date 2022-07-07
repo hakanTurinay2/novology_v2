@@ -39,7 +39,7 @@ document.getElementById('start-btn').addEventListener("click", function(e){
 function init() {
 	
 	// alert("PHONE");
-    const container = document.getElementById( 'container' );
+    const container = document.getElementById( 'container_scene' );
     renderer = new THREE.WebGLRenderer();
     renderer.setPixelRatio( window.devicePixelRatio );
     renderer.setSize( window.innerWidth, window.innerHeight );
@@ -225,7 +225,7 @@ function animate() {
 	renderer.render(scene, camera );
 	runTween()
 
-	console.log(skydome.camera.position)
+	// console.log(skydome.camera.position)
 }
 function runTween(){
 	requestAnimationFrame(runTween)
@@ -322,57 +322,57 @@ function resetFunc(){
 		}
 	}, 200);
 }
-document.getElementById('content').addEventListener("click", function(e){
-	console.log("clicked")
+// document.getElementById('content').addEventListener("click", function(e){
+// 	console.log("clicked")
 	
-	isAnimated = false
-	// controls.enabled = false;
-		new TWEEN.Tween(skydome.camera.rotation).to( { 
-			x:0,
-			z:0
-			}, 400 )
-			.onComplete(function () {
-					new TWEEN.Tween(skydome.camera.rotation).to( { 
-						y:1.4771640961978156
-						}, 1500 )
-						.onComplete(function () {
-							new TWEEN.Tween(skydome.camera.position).to( { 
-								x:9.956197042690752e-14,
-								y: -9.05306954682891e-16,
-								z:9.305614650809995e-15
-								}, 10 )
+// 	isAnimated = false
+// 	// controls.enabled = false;
+// 		new TWEEN.Tween(skydome.camera.rotation).to( { 
+// 			x:0,
+// 			z:0
+// 			}, 400 )
+// 			.onComplete(function () {
+// 					new TWEEN.Tween(skydome.camera.rotation).to( { 
+// 						y:1.4771640961978156
+// 						}, 1500 )
+// 						.onComplete(function () {
+// 							new TWEEN.Tween(skydome.camera.position).to( { 
+// 								x:9.956197042690752e-14,
+// 								y: -9.05306954682891e-16,
+// 								z:9.305614650809995e-15
+// 								}, 10 )
 								
-								.onComplete(function () {
+// 								.onComplete(function () {
 					
-									skydome.camera.updateMatrix()
-									controls.update();
-									controls.enabled = true;
-									// isAnimated = true
+// 									skydome.camera.updateMatrix()
+// 									controls.update();
+// 									controls.enabled = true;
+// 									// isAnimated = true
 									
-								})
-								.start();
+// 								})
+// 								.start();
 											
-						})
-						.start();
-			})
-			.start();
-		// new TWEEN.Tween(skydome.camera.quaternion).to( { 
-		// 	x:-0.2,
-		// 	y:0,
-		// 	z:0.2,
-		// 	w:0.7071067811865476
-		// 	}, 10 )
+// 						})
+// 						.start();
+// 			})
+// 			.start();
+// 		// new TWEEN.Tween(skydome.camera.quaternion).to( { 
+// 		// 	x:-0.2,
+// 		// 	y:0,
+// 		// 	z:0.2,
+// 		// 	w:0.7071067811865476
+// 		// 	}, 10 )
 			
-		// 	.onComplete(function () {
+// 		// 	.onComplete(function () {
 			
-		// 		skydome.camera.updateMatrix()
+// 		// 		skydome.camera.updateMatrix()
 			
-		// 		// controls.applyRotation()
-		// 		// controls.enabled = true;
-		// 		isAnimated = true
+// 		// 		// controls.applyRotation()
+// 		// 		// controls.enabled = true;
+// 		// 		isAnimated = true
 				
-		// 	})
-		// 	.start();	
+// 		// 	})
+// 		// 	.start();	
 				
-});
+// });
 

@@ -180,7 +180,7 @@ var DeviceOrientationControls = function ( object, domElement ) {
 					scope.dispatchEvent( changeEvent );
 				}
 			}
-			console.log(scope.object.quaternion)
+			// console.log(scope.object.quaternion)
 		};
 	} )();
 

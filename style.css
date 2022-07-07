@@ -7,11 +7,11 @@ body {
     padding: 0 !important;
     /* font-family: inherit; */
     /* font-family: Noto-CN-Regular, Noto-KR-Regular, Pangram-Regular !important; */
-    background: url(Assets/reception_bg.png) no-repeat;
-    background-repeat: no-repeat;
+    /* background: url(Assets/reception_bg.png) no-repeat; */
+    /* background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
   }
 
 /* THREE JS SCENE CSS */
@@ -506,7 +506,13 @@ hr.solid_horizantal {
 
 @media(min-width: 600px){
   /* WEB */
+  #start-btn{
+    display: none;
+  }
 }
 @media(max-width: 600px){
   /* PHONE */
+  #start-btn{
+    display: block;
+  }
 }
