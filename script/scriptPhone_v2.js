@@ -211,7 +211,14 @@ window.addEventListener('DeviceOrientationControls', function(e) {
 function animate() {
 	var dirVector = new THREE.Vector3();
 	camera.getWorldDirection(dirVector)
-	
+	// Range is 0 to Math.PI radians.
+	controls.minPolarAngle = 0; // radians
+	controls.maxPolarAngle = Math.PI; // radians
+
+	// How far you can orbit horizontally, upper and lower limits.
+	// If set, must be a sub-interval of the interval [ - Math.PI, Math.PI ].
+	controls.minAzimuthAngle = - Infinity; // radians
+	controls.maxAzimuthAngle = Infinity; // radians
 
     // PLS DO NOT EDIT
     requestAnimationFrame( animate );
