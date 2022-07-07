@@ -204,7 +204,10 @@ function onWindowResize() {
     renderer.setSize( window.innerWidth, window.innerHeight );
 
 }
-
+window.addEventListener('DeviceOrientationControls', function(e) {
+	var gammaRotation = e.gamma ? e.gamma * (Math.PI / 180) : 0;
+	bottleGroup.rotation.y = gammaRotation;
+  });
 function animate() {
 	var dirVector = new THREE.Vector3();
 	camera.getWorldDirection(dirVector)
