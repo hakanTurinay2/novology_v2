@@ -160,9 +160,11 @@ var DeviceOrientationControls = function ( object, domElement ) {
 
 				var alpha = device.alpha ? MathUtils.degToRad( device.alpha ) + scope.alphaOffset: 0; // Z
 
-				var beta = device.beta ? MathUtils.degToRad( device.beta ) : 0; // X'
+				// var beta = device.beta ? MathUtils.degToRad( device.beta ) : 0; // X'
 
 				// var gamma = device.gamma ? MathUtils.degToRad( device.gamma) : 0; // Y''
+				var beta = 0; // X'
+
 				var gamma = 0; // Y''
 
 				var orient = scope.screenOrientation ? MathUtils.degToRad( scope.screenOrientation) : 0; // O
