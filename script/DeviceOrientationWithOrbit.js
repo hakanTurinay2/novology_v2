@@ -37,7 +37,13 @@ var DeviceOrientationControls = function ( object, domElement ) {
 	var rotateStart = new Vector2();
 	var rotateEnd = new Vector2();
 	var rotateDelta = new Vector2();
-
+	this.minPolarAngle = 0; // radians
+	this.maxPolarAngle = Math.PI; // radians
+   
+	// How far you can orbit horizontally, upper and lower limits.
+	// If set, the interval [ min, max ] must be a sub-interval of [ - 2 PI, 2 PI ], with ( max - min < 2 PI )
+	this.minAzimuthAngle = - Infinity; // radians
+	this.maxAzimuthAngle = Infinity; // radians
 	var lastX = 0;
 	var diffX = 0;
 

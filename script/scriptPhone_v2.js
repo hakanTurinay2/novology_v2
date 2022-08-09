@@ -69,7 +69,7 @@ function init() {
 	skydome.camera.position.z =0.0000000000001; //ADDED BC MAKE THE DIFFERENCE BETWEEN SKYDOME AND VIDEOS
 
 	controls = new DeviceOrientationControls( skydome.camera, renderer.domElement );
-
+	console.log(controls.minPolarAngle)
 	
 	sceneManager = new THREE.LoadingManager();
 	sceneManager.onStart = function ( url, itemsLoaded, itemsTotal ) {
@@ -212,13 +212,13 @@ function animate() {
 	var dirVector = new THREE.Vector3();
 	camera.getWorldDirection(dirVector)
 	// Range is 0 to Math.PI radians.
-	controls.minPolarAngle = 0; // radians
-	controls.maxPolarAngle = Math.PI; // radians
+	// controls.minPolarAngle = 0; // radians
+	// controls.maxPolarAngle = Math.PI; // radians
 
-	// How far you can orbit horizontally, upper and lower limits.
-	// If set, must be a sub-interval of the interval [ - Math.PI, Math.PI ].
-	controls.minAzimuthAngle = - Infinity; // radians
-	controls.maxAzimuthAngle = Infinity; // radians
+	// // How far you can orbit horizontally, upper and lower limits.
+	// // If set, must be a sub-interval of the interval [ - Math.PI, Math.PI ].
+	// controls.minAzimuthAngle = - Infinity; // radians
+	// controls.maxAzimuthAngle = Infinity; // radians
 
     // PLS DO NOT EDIT
     requestAnimationFrame( animate );
@@ -258,7 +258,7 @@ function envLoad(textureUrl){
 function sceneStartFunc(){
 	if(startScenePos == 0){
 		currentState = INTRO
-		envLoad("./CubeMap/THINKER_CUBEMAP_0002.jpg")
+		envLoad("./CubeMap/test2.png")
 	}
 }
 //POSTIONING THE ARROW

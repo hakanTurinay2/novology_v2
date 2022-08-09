@@ -369,7 +369,7 @@ var OrbitControls = function ( object, domElement ) {
 
 	function rotateUp( angle ) {
 
-		// sphericalDelta.phi -= angle;
+		sphericalDelta.phi -= angle;
 
 	}
 
