@@ -21,6 +21,28 @@ body {
     margin: auto;
     display: block;
 }
+#button-div{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#start-btn{
+  position: absolute;
+  content: "BUTTON";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
 #black-screen{
   width: 100%;
   height: 100%;

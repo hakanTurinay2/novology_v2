@@ -28,7 +28,8 @@ var arrowHeight = -12
 //VIDEO VARIABLES
 let bilboardVideo,bilboardVideoTex,videoMatBottleScene,VideoPlayBottleScene,Scene1Video,videoMeshBottleScene
 
-// document.getElementById('start-btn').style.display = 'none';
+document.getElementById('button-div').style.display = 'none';
+document.getElementById('start-btn').style.display = 'none';
 document.getElementById('scene-button-acne').addEventListener('click', function(e) {
 	currentState = ACNE
 })
@@ -264,7 +265,7 @@ function envLoad(textureUrl){
 function sceneStartFunc(){
 	if(startScenePos == 0){
 		currentState = INTRO
-		envLoad("./CubeMap/test2.png")
+		envLoad("./CubeMap/test4.jpg")
 	}
 }
 //POSTIONING THE ARROW
