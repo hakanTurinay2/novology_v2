@@ -37,13 +37,7 @@ var DeviceOrientationControls = function ( object, domElement ) {
 	var rotateStart = new Vector2();
 	var rotateEnd = new Vector2();
 	var rotateDelta = new Vector2();
-	this.minPolarAngle = 0; // radians
-	this.maxPolarAngle = Math.PI; // radians
-   
-	// How far you can orbit horizontally, upper and lower limits.
-	// If set, the interval [ min, max ] must be a sub-interval of [ - 2 PI, 2 PI ], with ( max - min < 2 PI )
-	this.minAzimuthAngle = - Infinity; // radians
-	this.maxAzimuthAngle = Infinity; // radians
+
 	var lastX = 0;
 	var diffX = 0;
 
@@ -169,9 +163,6 @@ var DeviceOrientationControls = function ( object, domElement ) {
 				var beta = device.beta ? MathUtils.degToRad( device.beta ) : 0; // X'
 
 				var gamma = device.gamma ? MathUtils.degToRad( device.gamma) : 0; // Y''
-				// var beta = 0; // X'
-
-				// var gamma = 0; // Y''
 
 				var orient = scope.screenOrientation ? MathUtils.degToRad( scope.screenOrientation) : 0; // O
 
@@ -185,11 +176,9 @@ var DeviceOrientationControls = function ( object, domElement ) {
 				if ( 8 * ( 1 - lastQuaternion.dot( scope.object.quaternion ) ) > EPS ) {
 
 					lastQuaternion.copy( scope.object.quaternion );
-				
 					scope.dispatchEvent( changeEvent );
 				}
 			}
-			// console.log(scope.object.quaternion)
 		};
 	} )();
 
@@ -266,7 +255,6 @@ var DeviceOrientationControls = function ( object, domElement ) {
 
 	scope.domElement.addEventListener( 'touchstart', onTouchStart );
 	scope.domElement.addEventListener( 'touchend', onTouchEnd );
-	
 	scope.domElement.addEventListener( 'touchmove', onTouchMove );
 
 	this.connect();
