@@ -258,7 +258,7 @@ function envLoad(textureUrl){
 function sceneStartFunc(){
 	if(startScenePos == 0){
 		currentState = INTRO
-		envLoad("./CubeMap/test4.jpg")
+		envLoad("./CubeMap/scene2.jpg")
 	}
 }
 //POSTIONING THE ARROW
