@@ -1,5 +1,5 @@
 import * as THREE from './three.module.js';
-import { DeviceOrientationControls } from './DeviceOrientationWithOrbit.js';
+import { DeviceOrientationControls } from './DeviceOrientation.js';
 import TWEEN from 'https://cdn.jsdelivr.net/npm/@tweenjs/tween.js@18.5.0/dist/tween.esm.js';
 
 //CONTROLS
@@ -92,13 +92,13 @@ function init() {
 			scene.rotation.y =0
 
 
-			firstRoomScene.add(arrowScene1)
+			// firstRoomScene.add(arrowScene1)
 			arrowScene1.position.set(1.5*arrowDist * Math.sin(toRadians(80)) , arrowHeight, -arrowDist *1.5* Math.cos(toRadians(0)));
 
-			secondRoomScene.add(arrowScene2)
+			// secondRoomScene.add(arrowScene2)
 			arrowScene2.position.set(1.8*arrowDist * Math.sin(toRadians(-45)) , arrowHeight, -arrowDist *1.5* Math.cos(toRadians(0)));
 
-			thirdRoomScene.add(arrowScene3)
+			// thirdRoomScene.add(arrowScene3)
 			arrowScene3.position.set(1.8*arrowDist * Math.sin(toRadians(-80)) , arrowHeight, -arrowDist *1.5* Math.cos(toRadians(-80)));
 		}
 		else if(currentState === SCENE1){

@@ -68,11 +68,11 @@ function init() {
 		scene: new THREE.Scene(),
 		camera : new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.1, 300 ),
 	};
-	
+
 
 	//CONTORLS
 	skydome.camera.position.z =0.0000000000001; //ADDED BC MAKE THE DIFFERENCE BETWEEN SKYDOME AND VIDEOS
-
+	
 	controls = new OrbitControls( skydome.camera, renderer.domElement );
 
 	controls.rotateSpeed = - 0.25;
@@ -108,13 +108,13 @@ function init() {
 			scene.rotation.y =0
 
 
-			firstRoomScene.add(arrowScene1)
+			// firstRoomScene.add(arrowScene1)
 			arrowScene1.position.set(1.5*arrowDist * Math.sin(toRadians(80)) , arrowHeight, -arrowDist *1.5* Math.cos(toRadians(0)));
 
-			secondRoomScene.add(arrowScene2)
+			// secondRoomScene.add(arrowScene2)
 			arrowScene2.position.set(1.8*arrowDist * Math.sin(toRadians(-45)) , arrowHeight, -arrowDist *1.5* Math.cos(toRadians(0)));
 
-			thirdRoomScene.add(arrowScene3)
+			// thirdRoomScene.add(arrowScene3)
 			arrowScene3.position.set(1.8*arrowDist * Math.sin(toRadians(-80)) , arrowHeight, -arrowDist *1.5* Math.cos(toRadians(-80)));
 		}
 		else if(currentState === ACNE){
